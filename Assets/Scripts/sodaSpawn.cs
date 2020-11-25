@@ -13,7 +13,6 @@ public class sodaSpawn : MonoBehaviour
     }
 
     void InteractableObjectUsed(object sender, InteractableObjectEventArgs e) {
-        Debug.Log("spawn soda");
         Instantiate(sodaPrefab);
     }
 }

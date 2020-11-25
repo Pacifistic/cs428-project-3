@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class PlayPinball : MonoBehaviour
+public class paperSpawn : MonoBehaviour
 {
-    public VRTK_InteractableObject pinball;
-    public AudioSource sound;
+    public VRTK_InteractableObject machine;
+    public GameObject paperPrefab;
 
     protected virtual void OnEnable() {
-        pinball.InteractableObjectUsed += InteractableObjectUsed;
+        machine.InteractableObjectUsed += InteractableObjectUsed;
     }
 
     void InteractableObjectUsed(object sender, InteractableObjectEventArgs e) {
-        sound.Play();
+        Instantiate(paperPrefab);
     }
 }
